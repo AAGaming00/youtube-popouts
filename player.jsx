@@ -42,18 +42,20 @@ module.exports = class Player extends React.Component {
       {this.state.render ? 
         <Draggable
             dragAnywhere = {true}
-            className = {`pictureInPictureWindow-1B5qSe playerDrag ${this.state.closing ? 'playerClose' : ''}`}
+            className = 'pictureInPictureWindow-1B5qSe playerDrag'
             maxX = {this.state.width}
             maxY = {this.state.height}
             initialX= {50}
             initialY= {50}
         >
+          <div className={`playerContent ${this.state.closing ? 'playerClose' : ''}`}>
             <div className='playerTitle'>
                 <div onClick={() => this.close()}>
                     <Icon style={{float: 'right', color: '#ffffff'}} name="Close"/>
                 </div>
             </div>
             <iframe className="playerVideo" width="720" height="480" src={`https://www.youtube.com/embed/${this.props.id}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullscreen/>
+          </div>
         </Draggable> : null}
         </>,
         this.el)
