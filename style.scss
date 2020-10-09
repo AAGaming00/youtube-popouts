@@ -1,0 +1,58 @@
+.playerContainer {
+    z-index: 49873289154659285;
+    width: auto;
+    height: auto;
+    position: absolute;
+}
+
+.yt-button {
+    float: left;
+    width: 24px;
+    height: 24px;
+    white-space: nowrap;
+}
+
+.playerTitle {
+    width: 100%;
+    height: 15px;
+    cursor: move;
+}
+
+.playerDrag {
+    background-color: black;
+    animation: open 250ms ease-in-out forwards;
+}
+
+.playerVideo {
+    user-select: none;
+}
+
+
+// animations
+
+
+
+.playerClose {
+    animation: close 250ms ease-in-out forwards;
+}
+  
+@keyframes close { 
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(0)
+    }
+}
+
+@keyframes open { 
+    0% {
+        transform: scale(0)
+    }
+    99% {
+        transform: scale(1)
+    }
+    100% {
+
+    }
+}
