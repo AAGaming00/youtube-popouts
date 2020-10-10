@@ -54,7 +54,7 @@ module.exports = class Player extends React.Component {
                     <Icon style={{float: 'right', color: '#ffffff'}} name="Close"/>
                 </div>
             </div>
-            <iframe className="playerVideo" width="720" height="480" src={`https://www.youtube.com/embed/${this.props.id}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullscreen/>
+            <iframe className="playerVideo" width="400" height="225" src={`https://www.youtube.com/embed/${this.props.id}?autoplay=1`} frameBorder="0" allowFullScreen="" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"/>
           </div>
         </Draggable> : null}
         </>,
