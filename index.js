@@ -26,11 +26,11 @@ module.exports = class YoutubePopout extends Plugin {
         return res;
       } // discord is a garbage peice of software
       if (this.isYouTubeLink(args[0].href)) {
-        console.log(res.props.children);
+        //console.log(res.props.children);
         res.props.children = [ res.props.children ];
         res.props.children.push(React.createElement(button, { id: this.getYouTubeVideoID(args[0].href) }));
       }
-      console.log(args, res);
+      //console.log(args, res);
       return res;
     }, false);
     Anchor.default.displayName = 'Anchor';

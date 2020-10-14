@@ -14,7 +14,7 @@ module.exports = class Player extends React.Component {
     this.updateWindowDimensions();
     this.playContainer.appendChild(this.el);
     window.addEventListener('resize', this.updateWindowDimensions);
-    console.log(this.el)
+    //console.log(this.el)
   }
 
   componentWillUnmount () {
